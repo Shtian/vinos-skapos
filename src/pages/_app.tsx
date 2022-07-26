@@ -6,10 +6,7 @@ import superjson from "superjson";
 import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
 
-const MyApp: AppType = ({
-  Component,
-  pageProps: { session, ...pageProps },
-}) => {
+const MyApp: AppType = ({ Component, pageProps: { session, ...pageProps } }) => {
   return (
     <SessionProvider session={session}>
       <Component {...pageProps} />
@@ -27,6 +24,7 @@ const getBaseUrl = () => {
 };
 
 export default withTRPC<AppRouter>({
+  // eslint-disable-next-line no-unused-vars
   config({ ctx }) {
     /**
      * If you want to use SSR, you need to use the server's full URL

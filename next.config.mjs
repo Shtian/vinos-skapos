@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { env } from "./src/env/server.mjs";
 
 /**
