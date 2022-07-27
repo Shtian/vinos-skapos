@@ -17,6 +17,6 @@ export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['placekitten.com', 'lh3.googleusercontent.com'],
-  }
+    domains: ["placekitten.com", "lh3.googleusercontent.com", "platform-lookaside.fbsbx.com", "s.gravatar.com"],
+  },
 });

@@ -21,9 +21,7 @@ const Home: NextPage = () => {
       <main className="container mx-auto flex flex-col items-center justify-center p-4">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">Vinos Skapos</h1>
         <section className="flex flex-col">
-          <h2 className="text-2xl">Login:</h2>
-          <div className="p-1"></div>
-          <GoogleLogin />
+          <Auth0LoginButton />
         </section>
         <div className="pt-6 text-2xl text-blue-500 flex justify-center items-center w-full">
           {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
@@ -33,10 +31,10 @@ const Home: NextPage = () => {
   );
 };
 
-const GoogleLogin = () => {
+const Auth0LoginButton = () => {
   return (
-    <button className="px-5 py-2 bg-gray-300 hover:bg-gray-200 rounded" onClick={() => signIn("google")}>
-      Google
+    <button className="px-5 py-2 bg-gray-300 hover:bg-gray-200 rounded" onClick={() => signIn("auth0")}>
+      Log in
     </button>
   );
 };
